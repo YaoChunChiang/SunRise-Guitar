@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>吉他型號-DD120</title>
+</head>
+<body>
+        <div class="loadingDefault" style="opacity: 1">
+                <ul>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                </ul>
+            </div>
+        <header>
+                <div class="header">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/logo-only-small.png" alt="">
+                        </a>
+                        <a href="index.html">
+                            <img src="img/logo-name-small.png" alt="">
+                        </a>
+                    </div>
+                    <input type="checkbox" class="header-hb-swich" id="header-hb-swich">
+                    <nav>
+                        <ul>
+                            <a href="cus-online.html"><li>客製化吉他</li></a>
+                            <a href="video.html"><li>音樂人</li></a>
+                            <a class="stayed" href="merch.html"><li>吉他型號</li></a>
+                            <a href="about.html"><li>品牌介紹</li></a>
+                            <a href="store.html"><li>實體店面</li></a>
+                        </ul>
+                    </nav>
+                    <label for="header-hb-swich">
+                        <div class="hamburger"></div>
+                    </label>
+                </div>
+            </header>
+    <div class="guitar-info-title">
+        <h1 class="banner-txt-decoration">吉他資訊</h1>
+    </div>
+    <section class="guitar-info">
+        <div class="guitar-info-pic">
+            <img src="img/guitar-big.jpg" alt="">
+            <div class="pic-small">
+                <img src="img/guitar-big.jpg" alt="front">
+                <img src="img/guitar-big-side.jpg" alt="side">
+                <img src="img/guitar-big-back.jpg" alt="back">
+            </div>
+        </div>
+        <div class="guitar-info-detail">
+            <div class="content">
+                <h2 class="title-decoration">DD102</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi commodi sint magnam eos culpa in numquam, veniam quibusdam ex aut, doloremque deleniti explicabo, consequuntur consequatur pariatur non voluptate deserunt. Dolorum praesentium maiores obcaecati, eos iure dolorem odit! Reiciendis, aperiam unde.</p>
+            </div>
+            <div class="detail">
+                <h2>Specs</h2>
+                <table>
+                    <tr>
+                        <th>Back and Sides</th>
+                        <td>Genuine Mahogany</td>
+                    </tr>
+                    <tr>
+                        <th>Top</th>
+                        <td>Solid Cedar Top</td>
+                    </tr>
+                    <tr>
+                        <th>Neck</th>
+                        <td>Mahogany</td>
+                    </tr>
+                    <tr>
+                        <th>Fingerboard</th>
+                        <td>Richlite</td>
+                    </tr>
+                    <tr>
+                        <th>Fingerboard Radius</th>
+                        <td>16" (406.4 mm)</td>
+                    </tr>
+                    <tr>
+                        <th>Scale Length</th>
+                        <td>25.5" (647.7 mm)</td>
+                    </tr>
+                    <tr>
+                        <th>Nut Width</th>
+                        <td>1.72" (43.688 mm)</td>
+                    </tr>
+                    <tr>
+                        <th>Nut Type</th>
+                        <td>Graphtech</td>
+                    </tr>
+                    <tr>
+                        <th>Frets</th>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <th>Machine Head Ratio</th>
+                        <td>16:1</td>
+                    </tr>
+                </table>
+            </div>
+            <a href="store.html" class="btn">尋找店面</a>
+        </div>
+    </section>
+    <footer>
+            <p>Copyright © 2019 SunRise Guitar. All rights reserved</p>
+    </footer>
+    <script>
+        let changeBigPic = (e) =>{
+            let bigPic = document.querySelectorAll(".guitar-info-pic img")[0];
+            if(e.target.alt == "front"){
+                bigPic.src = "img/guitar-big.jpg";
+            }else if(e.target.alt == "side"){
+                bigPic.src = "img/guitar-big-side.jpg";
+            }else if(e.target.alt == "back"){
+                bigPic.src = "img/guitar-big-back.jpg";
+            }
+        }
+        let init = () =>{
+            let smallImg = document.querySelectorAll(".guitar-info-pic .pic-small img");
+            console.log(smallImg);
+            for(let i = 0; i < smallImg.length; i++){
+                smallImg[i].onclick = changeBigPic;
+            }
+        }
+        window.addEventListener("load", init, false);
+    </script>
+</body>
+</html>

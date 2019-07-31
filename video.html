@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>音樂人試彈</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+        <div class="loadingDefault" style="opacity: 1">
+                <ul>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                </ul>
+            </div>
+        <header>
+                <div class="header">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/logo-only-small.png" alt="">
+                        </a>
+                        <a href="index.html">
+                            <img src="img/logo-name-small.png" alt="">
+                        </a>
+                    </div>
+                    <input type="checkbox" class="header-hb-swich" id="header-hb-swich">
+                    <nav>
+                        <ul>
+                            <a href="cus-online.html"><li>客製化吉他</li></a>
+                            <a class="stayed" href="video.html"><li>音樂人</li></a>
+                            <a href="merch.html"><li>吉他型號</li></a>
+                            <a href="about.html"><li>品牌介紹</li></a>
+                            <a href="store.html"><li>實體店面</li></a>
+                        </ul>
+                    </nav>
+                    <label for="header-hb-swich">
+                        <div class="hamburger"></div>
+                    </label>
+                </div>
+            </header>
+    <section class="video-banner wrap">
+        <div class="video-banner-title banner-title">
+            <div class="banner-txt-decoration">
+                <h1>音樂人試彈</h1>
+                <h2>Ed Sheeran</h2>
+            </div>
+        </div>
+    </section>
+    <section class="video-musician wrap">
+        <div class="video-musician-title">
+            <h2 class="title-decoration">音樂人演出</h2>
+            <p>點選觀看名人彈奏日出吉他</p>
+        </div>
+        <div class="video-musician-row wrap">
+            <a href="john-mayer.html">
+                <div class="video-musician-pic-wrap">
+                    <img src="img/ed.jpg" alt="">
+                    <h2>Ed Sheeran</h2>
+                </div>
+            </a>
+            <a href="john-mayer.html">
+                <div class="video-musician-pic-wrap">
+                    <img src="img/sungha.jpg" alt="">
+                    <h2>Sungha Jung</h2>
+                </div>
+            </a>
+            <a href="john-mayer.html">
+                <div class="video-musician-pic-wrap">
+                    <img src="img/John-Mayer.jpg" alt="">
+                    <h2>John Mayer</h2>
+                </div>
+            </a>
+        </div>
+        <div class="video-musician-row">
+            <a href="john-mayer.html">
+                <div class="video-musician-pic-wrap">
+                    <img src="img/sungha.jpg" alt="">
+                    <h2>Sungha Jung</h2>
+                </div>
+            </a>
+            <a href="john-mayer.html">
+                <div class="video-musician-pic-wrap">
+                    <img src="img/John-Mayer.jpg" alt="">
+                    <h2>John Mayer</h2>
+                </div>
+            </a>
+            <a href="john-mayer.html">
+                <div class="video-musician-pic-wrap">
+                    <img src="img/ed.jpg" alt="">
+                    <h2>Ed Sheeran</h2>
+                </div>
+            </a>
+        </div>
+        <div class="video-musician-row">
+            <a href="john-mayer.html">
+                <div class="video-musician-pic-wrap">
+                    <img src="img/John-Mayer.jpg" alt="">
+                    <h2>John Mayer</h2>
+                </div>
+            </a>
+            <a href="john-mayer.html">
+                <div class="video-musician-pic-wrap">
+                    <img src="img/ed.jpg" alt="">
+                    <h2>Ed Sheeran</h2>
+                </div>
+            </a>
+            <a href="john-mayer.html">
+                <div class="video-musician-pic-wrap">
+                    <img src="img/sungha.jpg" alt="">
+                    <h2>Sungha Jung</h2>
+                </div>
+            </a>
+        </div>
+
+    </section>
+    <footer>
+        <p>Copyright © 2019 SunRise Guitar. All rights reserved</p>
+    </footer>
+
+
+    <script>
+        let changePic = (e) =>{
+            let banner = document.querySelectorAll(".video-musician");
+            let pic = document.querySelectorAll(".video-musician-pic-wrap h2");
+            console.log(e.target.querySelectorAll("h2")[0]);
+                if(e.target.querySelectorAll("h2")[0].innerHTML == "John Mayer"){
+                    banner[0].style.backgroundImage = "url('img/john-mayer-bp1.jpg')";
+                    banner[0].style.backgroundPosition = "300px center";
+                }else if(e.target.querySelectorAll("h2")[0].innerHTML == "Ed Sheeran"){
+                    banner[0].style.backgroundImage = "url('img/ed-sheeran-bp.jpg')";
+                    banner[0].style.backgroundPosition = "150px center";
+                }else if(e.target.querySelectorAll("h2")[0].innerHTML == "Sungha Jung"){
+                    banner[0].style.backgroundImage = "url('img/sungha-bp.jpg')";
+                    banner[0].style.backgroundPosition = "center center";                    
+                }
+        }
+
+
+        function init(){
+            let pic = document.querySelectorAll(".video-musician-pic-wrap");
+            console.log(pic);
+            for(let i = 0; i < pic.length; i++){
+                pic[i].addEventListener("mouseover", changePic, false);
+            }
+        }
+        window.addEventListener("load", init, false);
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>客製化吉他</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+        <div class="loadingDefault" style="opacity: 1">
+                <ul>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                    <li class="loading-bar"></li>
+                </ul>
+            </div>
+        <header>
+                <div class="header">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/logo-only-small.png" alt="">
+                        </a>
+                        <a href="index.html">
+                            <img src="img/logo-name-small.png" alt="">
+                        </a>
+                    </div>
+                    <input type="checkbox" class="header-hb-swich" id="header-hb-swich">
+                    <nav>
+                        <ul>
+                            <a class="stayed" href="cus-online.html"><li>客製化吉他</li></a>
+                            <a href="video.html"><li>音樂人</li></a>
+                            <a href="merch.html"><li>吉他型號</li></a>
+                            <a href="about.html"><li>品牌介紹</li></a>
+                            <a href="store.html"><li>實體店面</li></a>
+                        </ul>
+                    </nav>
+                    <label for="header-hb-swich">
+                        <div class="hamburger"></div>
+                    </label>
+                </div>
+            </header>
+    <section class="cus-online-banner wrap">
+        <div class="cus-online-banner-title">
+            <div class="banner-txt-decoration">
+                <h1>客製化吉他</h1>
+                <h2>線上開始製作</h2>
+            </div>
+        </div>
+    </section>
+    <section class="cus-online-cus">
+        <div class="cus-online-cus-title">
+            <h2 class="title-decoration">開始製作專屬於你的吉他</h2>
+            <p>選擇你想要的搭配</p>
+        </div>
+        <div class="cus-online-cus-wrap">
+            <div class="guitar-wood">
+                <div class="wood-pic-txt">
+                    <img src="img/cloud.jpg" alt="雲杉">
+                    <p>雲杉</p>
+                </div>
+                <div class="wood-pic-txt">
+                    <img src="img/west.jpg" alt="西岸雪松">
+                    <p>西岸雪松</p>
+                </div>
+                <div class="wood-pic-txt">
+                    <img src="img/koa.jpg" alt="夏威夷相思樹">
+                    <p>夏威夷相思樹</p>
+                </div>
+                <div class="wood-pic-txt">
+                    <img src="img/heart.jpg" alt="桃花心木">
+                    <p>桃花心木</p>
+                </div>
+            </div>
+            <div class="cus-online-cus-demo">
+                <img src="img/guitar-big-trans.png" alt="">
+                <img src="img/cloud.jpg" alt="">
+            </div>
+            <div class="guitar-shape">
+                <div class="shape-pic-txt">
+                    <img src="img/1jumbo-s.png" alt="Jumbo">
+                    <p>Jumbo</p>
+                </div>
+                <div class="shape-pic-txt">
+                    <img src="img/2Dreadnought-d.png" alt="Dreadnought">
+                    <p>Dread nought</p>
+                </div>
+                <div class="shape-pic-txt">
+                    <img src="img/3Grand Auditorium-g.png" alt="Grand Auditorium">
+                    <p>Grand Auditorium</p>
+                </div>
+                <div class="shape-pic-txt">
+                    <img src="img/4Parlor-oom.png" alt="Parlor">
+                    <p>Parlor</p>
+                </div>
+            </div>
+        </div>
+        <div class="choose">
+            <p class="output">雲杉</p><span> x </span><p class="output">Dreadnought</p>
+        </div>
+        <a class="btn" href="#">開始訂購</a>
+    </section>
+    <section class="cus-online-info wrap">
+        <div class="cus-online-info-content-wrap">
+            <div class="cus-online-info-content">
+                <div class="cus-online-info-pic">
+                    <img src="img/001-shipping.png" alt="">
+                </div>
+                <div class="cus-online-info-txt">
+                    <h2>安心快速的運送</h2>
+                    <p>您若選擇運送吉他，我們將會使用固定性及保護性最佳的材質來保護您的吉他</p>
+                </div>
+            </div>
+            <div class="cus-online-info-content">
+                <div class="cus-online-info-pic">
+                    <img src="img/diploma.png" alt="">
+                </div>
+                <div class="cus-online-info-txt">
+                    <h2>高品質的用料</h2>
+                    <p>我們使用的木料都是業界最高等級，讓你能夠享受到高品質的聲音</p>
+                </div>
+            </div>
+            <div class="cus-online-info-content">
+                <div class="cus-online-info-pic">
+                    <img src="img/tools.png" alt="">
+                </div>
+                <div class="cus-online-info-txt">
+                    <h2>技術高超製作用心</h2>
+                    <p>我們招攬業界吉他製作的大師們來製作吉他，品質與專業都無可挑剔</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright © 2019 SunRise Guitar. All rights reserved</p>
+    </footer>
+<script>
+    let changeWood = (e) =>{
+        let demo = document.querySelectorAll(".cus-online-cus-demo img")[1];
+        if(e.target.src){
+            demo.src = e.target.src;
+        }
+        let output = document.getElementsByClassName("output")[0];
+            output.innerHTML = e.target.alt;
+    }
+    let changeShape = (e) =>{
+        // console.log(e.target.alt);
+        if(e.target.alt == "Jumbo"){
+            let shape = document.querySelectorAll(".cus-online-cus-demo img")[0];
+            shape.src = "img/guitar-big-jumbo-trans.png";
+        }
+        if(e.target.alt == "Dreadnought"){
+            let shape = document.querySelectorAll(".cus-online-cus-demo img")[0];
+            console.log(shape);
+            shape.src = "img/guitar-big-trans.png";
+        }
+        if(e.target.alt == "Grand Auditorium"){
+            let shape = document.querySelectorAll(".cus-online-cus-demo img")[0];
+            console.log(shape);
+            shape.src = "img/guitar-big-ga-trans.png";
+        }
+        if(e.target.alt == "Parlor"){
+            let shape = document.querySelectorAll(".cus-online-cus-demo img")[0];
+            console.log(shape);
+            shape.src = "img/guitar-big-parlor-trans.png";
+        }
+        let output = document.getElementsByClassName("output")[1];
+            output.innerHTML = e.target.alt;
+    }
+    let init = () =>{
+        let woodType = document.querySelectorAll(".wood-pic-txt");
+        let shapeType = document.querySelectorAll(".shape-pic-txt img");
+        for(let i = 0; i < woodType.length; i++ ){
+            woodType[i].onclick = changeWood;
+        }
+        for(let i = 0; i < shapeType.length; i++ ){
+            shapeType[i].onclick = changeShape;
+        }
+        
+
+    }
+    window.addEventListener("load", init, false);
+</script>
+</body>
+</html>
